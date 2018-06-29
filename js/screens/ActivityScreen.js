@@ -3,12 +3,12 @@ import { View, Text, StyleSheet, Dimensions } from 'react-native'
 
 import NewsHolder from '../components/NewsHolder'
 
-class HomeScreen extends React.Component {
+class ActivityScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.buttonBox}>
-          <Text>Home Screen</Text>
+          <Text>ActivityScreen</Text>
         </View>
         <View style={styles.newsBox}>
           <NewsHolder />
@@ -37,4 +37,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default HomeScreen
+export default ActivityScreen
