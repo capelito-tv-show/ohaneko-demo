@@ -10,9 +10,6 @@ class HomeScreen extends React.Component {
         <View style={styles.buttonBox}>
           <Text>Home Screen</Text>
         </View>
-        <View style={styles.newsBox}>
-          <NewsHolder />
-        </View>
       </View>
     )
   }
@@ -27,11 +24,6 @@ const styles = StyleSheet.create({
   },
   buttonBox: {
     flex: 3,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  newsBox: {
-    flex: 2,
     alignItems: 'center',
     justifyContent: 'center'
   }

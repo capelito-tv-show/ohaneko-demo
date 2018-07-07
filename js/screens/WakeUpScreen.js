@@ -1,8 +1,9 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Dimensions } from 'react-native'
+
 import NewsHolder from '../components/NewsHolder'
 
-class SettingScreen extends React.Component {
+class WakeUpScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
@@ -36,4 +37,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default SettingScreen
+export default WakeUpScreen

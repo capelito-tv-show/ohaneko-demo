@@ -1,19 +1,14 @@
 import React from 'react'
-import { View, Text, StyleSheet, Dimensions } from 'react-native'
+import { View, Text, StyleSheet, ScrollView, ListItem } from 'react-native'
 
 import NewsHolder from '../components/NewsHolder'
 
 class ActivityScreen extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.buttonBox}>
-          <Text>ActivityScreen</Text>
-        </View>
-        <View style={styles.newsBox}>
-          <NewsHolder />
-        </View>
-      </View>
+      <ScrollView>
+        <Text>hogeeeeee</Text>
+      </ScrollView>
     )
   }
 }
