@@ -2,18 +2,20 @@ import React from 'react'
 import { StyleSheet, Text, View, Platform } from 'react-native'
 import {
   createStackNavigator,
+  createSwitchNavigator,
   createMaterialTopTabNavigator,
   createBottomTabNavigator
 } from 'react-navigation'
 
-import Header from './js/components/Header'
-
 import HomeScreen from './js/screens/HomeScreen'
 import Ohaneko from './js/Home/Ohaneko'
 import Neruneko from './js/Home/Neruneko'
-import WakeUpScreen from './js/screens/WakeUpScreen'
 import ActivityScreen from './js/screens/ActivityScreen'
 import SettingScreen from './js/screens/SettingScreen'
+import Loading from './js/components/authentication/Loading'
+import Login from './js/components/authentication/Login'
+import Main from './js/components/authentication/Main'
+import SignUp from './js/components/authentication/SignUp'
 
 export default class Route extends React.Component {
   render() {
@@ -95,9 +97,21 @@ export default class Route extends React.Component {
       }
     )
 
+    const AuthenticationFlow = createSwitchNavigator(
+      {
+        App: NavigatorTab,
+        Auth: Login,
+        SignUp: SignUp,
+        AuthLoading: Loading
+      },
+      {
+        initialRouteName: 'AuthLoading'
+      }
+    )
+
     return (
       <View style={styles.wrapper}>
-        <NavigatorTab />
+        <AuthenticationFlow />
       </View>
     )
   }
